@@ -3,7 +3,8 @@ function payroll(){
     const name = "Anthony Kuma Batsa";
     const role = "Manager";
     const baseSalary = 23000;
-    const hoursWorked = 190;// total hours worked in the month (including overtime) = 45 * 4 + 10   
+    // total hours worked in the month (including overtime) = 45 * 4 + 10  
+    const hoursWorked = 190; 
     
     //Calculation for Overtime
     if (hoursWorked > 180) {
