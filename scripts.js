@@ -6,13 +6,11 @@ function payroll(){
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
     let hoursWorked = 190; 
     let Sales = 0;
-
     //Calculation for Overtime
     if (hoursWorked > 180) {
     let extraHours = hoursWorked - 180;
     overtime = extraHours * (0.02 * baseSalary);
     }
-
     //Bonus Calculation
     if (role === "Manager") {
     bonus = 0.05 * (baseSalary + overtime);
@@ -39,7 +37,6 @@ function payroll(){
     }
     return tax;
     }
-
     gross = baseSalary + overtime + bonus;
     pension = 0.12 * gross;
     net = gross - (pension + taxRate(gross));
