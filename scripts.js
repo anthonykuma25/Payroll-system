@@ -5,13 +5,14 @@ function payroll(){
     const baseSalary = 23000;
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
     const hoursWorked = 190; 
-
+    const Sales = 0;
+   
     //Calculation for Overtime
     if (hoursWorked > 180) {
-    let extraHours = hoursWorked - 180;
+    const extraHours = hoursWorked - 180;
     overtime = extraHours * (0.02 * baseSalary);
     }
-    
+
     //Bonus Calculation
     if (role === "Manager") {
     bonus = 0.05 * (baseSalary + overtime);
@@ -20,12 +21,13 @@ function payroll(){
     bonus = 0.08 * (baseSalary + overtime);
     } 
     else if (role === "Sales") {
-    bonus = 0.04 * sales;
+    bonus = 0.04 * Sales;
     } 
-
+   
     //Tax Calculation
     function taxRate(gross) {
-    const tax = 0;
+    let tax = 0;
+
     if (gross > 10500) {
     tax = (gross - 10500) * 0.12;
     } else if (gross > 7500) {
