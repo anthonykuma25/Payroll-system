@@ -6,7 +6,7 @@ function payroll(){
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
     let hoursWorked = 190; 
     let Sales = 0;
-   
+
     //Calculation for Overtime
     if (hoursWorked > 180) {
     let extraHours = hoursWorked - 180;
