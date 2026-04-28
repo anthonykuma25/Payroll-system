@@ -5,6 +5,12 @@ function payroll(){
     const baseSalary = 23000;
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
     const hoursWorked = 190; 
+    const overtime = 0;
+    const bonus = 0;
+    const gross = 0;
+    const pension = 0;
+    const tax = 0;
+    const net = 0;
     
     //Calculation for Overtime
     if (hoursWorked > 180) {
