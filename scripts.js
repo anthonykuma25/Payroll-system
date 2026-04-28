@@ -11,7 +11,7 @@ function payroll(){
     const pension = 0;
     const tax = 0;
     const net = 0;
-    
+
     //Calculation for Overtime
     if (hoursWorked > 180) {
     let extraHours = hoursWorked - 180;
