@@ -1,15 +1,15 @@
 function payroll(){
     // declare variables
-    const name = "Anthony Kuma Batsa";
-    const role = "Manager";
-    const baseSalary = 23000;
+    let name = "Anthony Kuma Batsa";
+    let role = "Manager";
+    let baseSalary = 23000;
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
-    const hoursWorked = 190; 
-    const Sales = 0;
+    let hoursWorked = 190; 
+    let Sales = 0;
    
     //Calculation for Overtime
     if (hoursWorked > 180) {
-    const extraHours = hoursWorked - 180;
+    let extraHours = hoursWorked - 180;
     overtime = extraHours * (0.02 * baseSalary);
     }
 
