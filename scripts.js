@@ -5,19 +5,13 @@ function payroll(){
     const baseSalary = 23000;
     // total hours worked in the month (including overtime) = 45 * 4 + 10  
     const hoursWorked = 190; 
-    const overtime = 0;
-    const bonus = 0;
-    const gross = 0;
-    const pension = 0;
-    const tax = 0;
-    const net = 0;
 
     //Calculation for Overtime
     if (hoursWorked > 180) {
     let extraHours = hoursWorked - 180;
     overtime = extraHours * (0.02 * baseSalary);
     }
-
+    
     //Bonus Calculation
     if (role === "Manager") {
     bonus = 0.05 * (baseSalary + overtime);
@@ -29,16 +23,28 @@ function payroll(){
     bonus = 0.04 * sales;
     } 
 
+    //Tax Calculation
+    function taxRate(gross) {
+    const tax = 0;
+    if (gross > 10500) {
+    tax = (gross - 10500) * 0.12;
+    } else if (gross > 7500) {
+    tax = (gross - 7500) * 0.10;
+    } else if (gross > 6000) {
+    tax = (gross - 6000) * 0.07;
+    } else {
+    tax = 0;
+    }
+    return tax;
+    }
+
     gross = baseSalary + overtime + bonus;
     pension = 0.12 * gross;
-    tax = gross * 0.1; 
-    net = gross - (pension + tax);
+    net = gross - (pension + taxRate(gross));
     
+    console.log("EMPLOYEE PAYSLIP - April 2026");
     console.log("Employee Name: " + name);
     console.log("Role: " + role);
-    console.log("Base Salary: GHS " + baseSalary);
     console.log("Net Salary: GHS " + net);
-
-}
-
-payroll();
+    }
+    payroll();
