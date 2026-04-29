@@ -21,7 +21,6 @@ function payroll(){
     else if (role === "Sales") {
     bonus = 0.04 * Sales;
     } 
-   
     //Tax Calculation
     function taxRate(gross) {
     let tax = 0;
